@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Kerala's Best IAS Academy | UPSC Coaching</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    /* --- Reset & Base --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      background: #f8fafc;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* --- Header / Navigation --- */
+    .header {
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+    }
+
+    .logo span {
+      color: #b45309;
+    }
+
+    .nav {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #334155;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav a:hover {
+      color: #b45309;
+    }
+
+    .btn-primary {
+      background: #b45309;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary:hover {
+      background: #92400e;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #b45309;
+      border: 2px solid #b45309;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .btn-outline:hover {
+      background: #b45309;
+      color: #fff;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      padding: 64px 0 80px;
+      background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%);
+      border-bottom: 1px solid #fde68a;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+
+    .hero-content h1 span {
+      color: #b45309;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #475569;
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.1);
+      border: 1px solid #f1f5f9;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #b45309;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    /* --- Section Titles --- */
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .section-title p {
+      color: #64748b;
+      max-width: 600px;
+      margin: 8px auto 0;
+    }
+
+    /* --- Trust Badges (Stats Bar) --- */
+    .trust-bar {
+      background: #ffffff;
+      padding: 40px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .trust-bar .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 24px;
+      text-align: center;
+    }
+
+    .trust-item .number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #b45309;
+    }
+
+    .trust-item .label {
+      color: #475569;
+      font-weight: 500;
+    }
+
+    /* --- About Section --- */
+    .about {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .about-content h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+
+    .about-content p {
+      color: #475569;
+      margin-bottom: 16px;
+    }
+
+    .about-image {
+      background: #f1f5f9;
+      height: 300px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94a3b8;
+      font-weight: 500;
+      border: 2px dashed #cbd5e1;
+    }
+
+    /* --- Courses Section --- */
+    .courses {
+      padding: 80px 0;
+      background: #f8fafc;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .course-card {
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      border: 1px solid #e2e8f0;
+      transition: transform 0.2s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .course-card h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .course-card p {
+      color: #64748b;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    .course-card .tag {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* --- Why Choose Us --- */
+    .why-us {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+    }
+
+    .feature-item {
+      text-align: center;
+      padding: 24px;
+    }
+
+    .feature-item .icon {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    .feature-item h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .feature-item p {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    /* --- Toppers / Results --- */
+    .toppers {
+      padding: 80px 0;
+      background: #f8fafc;
+    }
+
+    .topper-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px;
+    }
+
+    .topper-card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+    }
+
+    .topper-card .rank {
+      font-weight: 800;
+      color: #b45309;
+      font-size: 1.1rem;
+    }
+
+    .topper-card .name {
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .topper-card .year {
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+
+    /* --- Testimonials --- */
+    .testimonials {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .testimonial-card {
+      background: #f8fafc;
+      padding: 32px;
+      border-radius: 16px;
+      border-left: 4px solid #b45309;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      color: #334155;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-card .author {
+      font-weight: 600;
+    }
+
+    .testimonial-card .role {
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+
+    /* --- Contact / CTA --- */
+    .contact {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+    }
+
+    .contact .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .contact-info p {
+      color: #cbd5e1;
+      margin-bottom: 24px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: #e2e8f0;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: #334155;
+      color: #fff;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #94a3b8;
+    }
+
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form .btn-primary {
+      width: 100%;
+      padding: 14px;
+      font-size: 1.1rem;
+    }
+
+    /* --- Footer --- */
+    .footer {
+      background: #0f172a;
+      padding: 24px 0;
+      border-top: 1px solid #1e293b;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .hero .container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact .container {
+        grid-template-columns: 1fr;
+      }
+
+      .header .container {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .trust-bar .container {
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-stats {
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+      }
+
+      .stat-number {
+        font-size: 1.6rem;
+      }
+
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">IAS<span>Academy</span></div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Results</a>
+        <a href="#">Contact</a>
+        <a href="#" class="btn-primary">Enquire Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Kerala's Trusted <span>IAS Academy</span></h1>
+        <p>Transform your UPSC dream into reality with expert mentorship, comprehensive study material, and a proven track record of success.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn-primary">Explore Courses</a>
+          <a href="#" class="btn-outline">Talk to Advisor</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">12+</span>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">560+</span>
+          <span class="stat-label">Success Stories</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">70+</span>
+          <span class="stat-label">Expert Faculty</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Rank Holders</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-item">
+        <div class="number">#1</div>
+        <div class="label">IAS Academy in Kerala</div>
+      </div>
+      <div class="trust-item">
+        <div class="number">4.8★</div>
+        <div class="label">Google Rating</div>
+      </div>
+      <div class="trust-item">
+        <div class="number">100%</div>
+        <div class="label">Student Satisfaction</div>
+      </div>
+      <div class="trust-item">
+        <div class="number">30+</div>
+        <div class="label">Years of Legacy</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h3>Building Civil Servants Since 2014</h3>
+          <p>Founded with a vision to nurture dedicated civil servants from Kerala, our academy has been a transformative force in UPSC coaching. With a student-centric approach, expert faculty from premier institutes, and a proven methodology, we have guided over 560 aspirants to success.</p>
+          <p>Our strength lies in our team of young, dynamic faculty who are attuned to the latest UPSC patterns, ensuring our students are always a step ahead.</p>
+          <a href="#" class="btn-primary" style="display:inline-block; margin-top:8px;">Know More About Us</a>
+        </div>
+        <div class="about-image">
+          <span>📚 Academy Image Placeholder</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Signature Programs</h2>
+        <p>Expertly crafted learning paths for every stage of your UPSC journey.</p>
+      </div>
+      <div class="course-grid">
+        <div class="course-card">
+          <span class="tag">Popular</span>
+          <h4>Prelims Cum Mains Integrated</h4>
+          <p>Ideal for full-time aspirants and freshers starting from the basics. Comprehensive coverage of the entire syllabus.</p>
+        </div>
+        <div class="course-card">
+          <span class="tag">Flexible</span>
+          <h4>Online Batch for Working Professionals</h4>
+          <p>Designed for working professionals, homemakers, and those in higher studies. Live classes and recorded sessions.</p>
+        </div>
+        <div class="course-card">
+          <span class="tag">New</span>
+          <h4>Foundation Course (1–2 Years)</h4>
+          <p>Build a strong conceptual foundation for school and college students with a long-term preparation strategy.</p>
+        </div>
+        <div class="course-card">
+          <span class="tag">Advanced</span>
+          <h4>Mains Enrichment & Test Series</h4>
+          <p>Focused answer writing practice, mentorship, and test series to refine your Mains preparation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-us">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose Us</h2>
+        <p>What makes us the preferred IAS coaching academy in Kerala.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="icon">🧑‍🏫</div>
+          <h4>Expert Faculty</h4>
+          <p>Alumni from IIM, NIT, and CET with years of UPSC mentoring experience.</p>
+        </div>
+        <div class="feature-item">
+          <div class="icon">📘</div>
+          <h4>Comprehensive Material</h4>
+          <p>Updated study material, current affairs modules, and curated resources.</p>
+        </div>
+        <div class="feature-item">
+          <div class="icon">🎯</div>
+          <h4>Personalized Mentorship</h4>
+          <p>Dedicated mentors for custom study plans, progress tracking, and doubt resolution.</p>
+        </div>
+        <div class="feature-item">
+          <div class="icon">🏆</div>
+          <h4>Proven Results</h4>
+          <p>Consistent top ranks and a 560+ strong alumni network in civil services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toppers Section -->
+  <section class="toppers">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Rank Holders</h2>
+        <p>Inspiring success stories from Kerala's brightest minds.</p>
+      </div>
+      <div class="topper-grid">
+        <div class="topper-card">
+          <div class="rank">AIR 4</div>
+          <div class="name">P K Sidharth Ramkumar</div>
+          <div class="year">2024</div>
+        </div>
+        <div class="topper-card">
+          <div class="rank">AIR 6</div>
+          <div class="name">Meera K</div>
+          <div class="year">2021</div>
+        </div>
+        <div class="topper-card">
+          <div class="rank">AIR 15</div>
+          <div class="name">Sidharth B</div>
+          <div class="year">2017</div>
+        </div>
+        <div class="topper-card">
+          <div class="rank">AIR 21</div>
+          <div class="name">Dilip K Kainikkara</div>
+          <div class="year">2022</div>
+        </div>
+        <div class="topper-card">
+          <div class="rank">AIR 29</div>
+          <div class="name">Sreelakshmi Ram</div>
+          <div class="year">2019</div>
+        </div>
+        <div class="topper-card">
+          <div class="rank">AIR 33</div>
+          <div class="name">Anand O</div>
+          <div class="year">2016</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Our Students Say</h2>
+        <p>Real stories from aspirants who cracked the UPSC exam.</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>“The personalized approach of the Mains Companion Program helped me identify my strengths and weaknesses. I improved my Mains score from 790 to 831.”</p>
+          <div class="author">Vikas</div>
+          <div class="role">AIR 27, 2025</div>
+        </div>
+        <div class="testimonial-card">
+          <p>“This was my sixth and final attempt. The Mains Companionship Program and the answer writing practice were game-changers for me.”</p>
+          <div class="author">Kiran Kamate</div>
+          <div class="role">AIR 53, 2025</div>
+        </div>
+        <div class="testimonial-card">
+          <p>“The one-to-one mentorship and regular evaluation helped me structure my answers effectively. I am deeply grateful to the entire team.”</p>
+          <div class="author">Sonali Jha</div>
+          <div class="role">AIR 89, 2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section class="contact">
+    <div class="container">
+      <div class="contact-info">
+        <h2>Start Your UPSC Journey Today</h2>
+        <p>Get in touch with our admissions team to find the right course for you. We're here to guide you every step of the way.</p>
+        <div class="contact-detail">📍 Kochi, Kerala</div>
+        <div class="contact-detail">📞 +91 94950 15888</div>
+        <div class="contact-detail">✉️ info@iasacademy.in</div>
+      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number">
+        <textarea placeholder="Your Message..."></textarea>
+        <button type="submit" class="btn-primary">Send Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 IAS Academy. All rights reserved. | Kerala's Trusted UPSC Coaching Center</p>
+    </div>
+  </footer>
+
+</body>
+  </html>
